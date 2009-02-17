@@ -1,0 +1,27 @@
+<h1>Exported Form Responses</h1>
+
+<% @form_responses.each do |response| -%>
+
+<table border="1" cellspacing="5" cellpadding="5">
+	<tr>
+		<td>Date</td>
+		<td><%= response.created_at %></td>
+	</tr>
+  <% for column in response.content.keys -%>
+	<tr>
+    	<td><%= column %></td>
+    	<td><%=h response.content[column] %></td>
+	</tr>
+  <% end -%>
+  <% for att in response.form_files -%>
+    <tr>
+		<td>Attachment</td>
+		<td><%= link_to att.filename, att.public_filename %></td>
+	</tr>
+  <% end -%>
+ 
+</table>
+<br />
+
+<% end -%>
+

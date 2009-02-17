@@ -1,7 +1,7 @@
 class DatabaseFormExtension < Radiant::Extension
-  version "0.2.1"
+  version "0.2"
   description "Provides a page type for email contact and request forms and saves requests to a database (modified Mailer)."
-  url "http://github.com/zapnap/database_form"
+  url "http://ubikorp.com/projects"
 
   define_routes do |map|
     map.connect 'admin/form_responses/:action/:id', :controller => 'admin/form_responses'

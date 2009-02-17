@@ -1,0 +1,18 @@
+first_file:
+  content_type: application/octet-stream
+  size: "65694"
+  form_response_id: 10
+  id: "1"
+  response_field: 
+  filename: testfile1.txt
+  created_at: <%= 2.days.ago.to_s :db %>
+
+second_file:
+  content_type: application/octet-stream
+  size: "68102"
+  form_response_id: 10
+  id: "2"
+  response_field: 
+  filename: testfile2.txt
+  created_at: <%= 2.days.ago.to_s :db %>
+

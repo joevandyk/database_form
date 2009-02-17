@@ -18,6 +18,10 @@ class DatabaseFormPageTagsTest < Test::Unit::TestCase
     assert_render_match("input type=\"hidden\" name=\"form_name\" value=\"contact\"", render_form, "contact")
   end
 
+  def test_form_tag_with_email
+    assert_render_match("input type=\"hidden\" name=\"form_email\" value=\"joe@fixieconsulting.com\"", render_form, "contact")
+  end
+
   def test_form_tag_without_name
     assert_raise(::DatabaseFormPage::DatabaseFormTagError) do
       assert_render_match("form", %Q(<r:database:form></r:database:form>), "contact")
@@ -39,6 +43,6 @@ class DatabaseFormPageTagsTest < Test::Unit::TestCase
   private
 
   def render_form(content = "", options = "")
-    %Q(<r:database:form name="contact" #{options}>#{content}</r:database:form>)
+    %Q(<r:database:form email="joe@fixieconsulting.com" name="contact" #{options}>#{content}</r:database:form>)
   end
 end

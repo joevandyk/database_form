@@ -18,3 +18,12 @@ third:
     email: 'info@request.net'
     name: 'inforequest'
   created_at: <%= 2.days.ago.to_s :db %>
+ 
+fileupload:
+  id: 10
+  name: fileupload
+  content:
+    email: 'test3@test.net'
+    name: 'fileupload'
+  created_at: <%= 2.days.ago.to_s :db %>
+  

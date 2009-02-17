@@ -1,6 +1,6 @@
 <h1>Export Form Responses</h1>
-
-<p>Select a form name and a date range. Then choose 'Export' to generate an XML file.</p>
+<p>Forms are created within pages.  When you create a page, be sure to select "Database Form" as the page type. Then add <pre style="display:inline">r:database</pre> input tags to build the form.</p>
+<p>Select a form name and a date range. Then choose an export option.</p>
 
 <% form_tag(:action => 'export') do -%>
   <table cellpadding="5">
@@ -17,7 +17,7 @@
       <td><%= datetime_select(:filter, :end_time) %></td>
     </tr>
     <tr>
-      <td colspan="2"><%= submit_tag('Export') %></td>
+      <td colspan="2"><%= submit_tag('View online') %><%= submit_tag('Export as XML') %></td>
     </tr>
   </table>
 <% end -%>

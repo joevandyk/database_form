@@ -38,6 +38,7 @@ The entire inventory of tags includes:
   <r:database:checkbox name="" validate=""/>
   <r:database:hidden name="" validate=""/>
   <r:database:textarea name="" validate=""/>
+  <r:database:file name="" validate=""/>
   <r:database:radio name="" validate=""/>
   <r:database:radiogroup name="" validate="">...</r:database:radiogroup>
   <r:database:select name="" validate="">...</r:database:select>
@@ -80,12 +81,9 @@ input.validation-failed, textarea.validation-failed {
 The Database Forms extension also adds a tab to Radiant's admin
 interface which can be used to export user form data. You can select
 by form name (the name you assigned to a form in its tag) and date
-ranges. XML is the only supported export format at this time.
-
-Maybe we'll sexy this up some day and make listings browsable through
-the admin but the most common use case is probably exporting data, and
-that's what we needed at the time, so it is what it is. If you'd like
-to extend it, we definitely welcome submissions.
+ranges. XML is the only supported export format at this time.  It is also
+possible to browse responses through the admin page and download any files
+uploaded along with the forms.
 
 This extension is based on the Mailer extension by Matt McCray and 
 (originally) Sean Cribbs. It was inspired by a post on SuperGloo's blog
@@ -96,7 +94,7 @@ tables (model attributes for the FormResponse model are serialized
 and stored in a content text area).
 
 Developed by Nick Plante for Ubikorp Internet Services. 
-Tested on Radiant 0.6.4.
+Tested on Radiant 0.6.7.
 
 http://github.com/zapnap/database_form
 

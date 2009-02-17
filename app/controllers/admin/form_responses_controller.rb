@@ -16,7 +16,11 @@ class Admin::FormResponsesController < ApplicationController
       options[:conditions] = conditions.join(" AND ")
     end
     @form_responses = FormResponse.find(:all, options)
-    render(:xml => @form_responses.to_xml(:root => "form-responses"))
+    
+    if params[:commit] == "Export as XML"
+      return render(:xml => @form_responses.to_xml(:root => "form-responses"))
+    end
+    
   end
 
   protected
